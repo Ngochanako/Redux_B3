@@ -18,6 +18,9 @@ export default function Cart() {
     id:idProductInCart,
     payload:value,
     })
+    dispatch({
+      type:'NO_NOTIFY'
+    })
   }
   const updateProductInCart=(idCart:number)=>{
     dispatch({
@@ -66,6 +69,8 @@ export default function Cart() {
                   <td>{btn.product.price} USD</td>
                   <td>
                     <input
+                      min='1'
+                      max={btn.product.quantity}
                       name="cart-item-quantity-1"
                       type="number"
                       value={btn.quantityUpdate}

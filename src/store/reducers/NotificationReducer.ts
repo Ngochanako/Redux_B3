@@ -9,6 +9,8 @@ const NotificationReducer=(state=initialNotification,action:any)=>{
             return 'delete';
         case 'UPDATE_NOTIFY':
             return 'update'; 
+        case 'NO_NOTIFY':
+            return 'no';
         default:
             return state; 
     }
